@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Programs/GitHub Repository/CelebrityGuessingGame/app/src/main/res/layout-land/activity_help.xml" value="0.4691358024691358" />
+        <entry key="..\:/Programs/GitHub Repository/CelebrityGuessingGame/app/src/main/res/layout-land/activity_win.xml" value="0.4691358024691358" />
+        <entry key="..\:/Programs/GitHub Repository/CelebrityGuessingGame/app/src/main/res/layout/activity_game.xml" value="0.5541666666666667" />
+        <entry key="..\:/Programs/GitHub Repository/CelebrityGuessingGame/app/src/main/res/layout/activity_help.xml" value="0.5541666666666667" />
+        <entry key="..\:/Programs/GitHub Repository/CelebrityGuessingGame/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
+        <entry key="..\:/Programs/GitHub Repository/CelebrityGuessingGame/app/src/main/res/layout/activity_win.xml" value="0.5541666666666667" />
         <entry key="..\:/School/MobileAppSODV2203/CelebrityGuessingGame/app/src/main/res/layout/activity_game.xml" value="0.4348958333333333" />
         <entry key="..\:/School/MobileAppSODV2203/CelebrityGuessingGame/app/src/main/res/layout/activity_main.xml" value="0.4348958333333333" />
         <entry key="..\:/School/MobileAppSODV2203/CelebrityGuessingGame/app/src/main/res/layout/play_game.xml" value="0.4348958333333333" />
