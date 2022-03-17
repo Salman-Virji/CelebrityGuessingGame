@@ -10,50 +10,66 @@
         android:id="@+id/btnMainActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        tools:ignore="DuplicateIds"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="52dp">
 
+        <ImageView
+            android:id="@+id/BackgroundImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="todo"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/background_pic" />
+
         <Button
             android:id="@+id/btnChoice1"
-            android:layout_width="206dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="212dp"
+            android:layout_width="145dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="252dp"
+            android:tag="Choice1"
             android:text="Choice1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.097"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
         <Button
             android:id="@+id/btnChoice3"
-            android:layout_width="206dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="354dp"
+            android:layout_width="145dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="336dp"
             android:text="Choice3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.097"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btnChoice2"
-            android:layout_width="206dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="292dp"
+            android:layout_width="145dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="268dp"
             android:text="Choice2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintHorizontal_bias="0.868"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btnChoice4"
-            android:layout_width="206dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="418dp"
+            android:layout_width="145dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="336dp"
             android:text="Choice4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.868"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,6 +82,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/question" />
+
+        <TextView
+            android:id="@+id/txtScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:text="Score:"
+            app:layout_constraintTop_toTopOf="@+id/btnChoice3"
+            tools:layout_editor_absoluteX="47dp" />
+
+        <Button
+            android:id="@+id/idReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="72dp"
+            android:text="Next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnChoice4" />
+
+        <TextView
+            android:id="@+id/txtScorenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            tools:layout_editor_absoluteX="104dp"
+            tools:layout_editor_absoluteY="433dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
