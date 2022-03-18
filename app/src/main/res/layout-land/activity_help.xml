@@ -6,6 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/BackgroundImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="todo"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/background_pic" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/whitebackground"
+        android:layout_width="542dp"
+        android:layout_height="288dp"
+        android:layout_margin="30dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/white_background"
+        app:layout_constraintBottom_toBottomOf="@+id/BackgroundImage"
+        app:layout_constraintEnd_toEndOf="@+id/BackgroundImage"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/BackgroundImage"
+        app:layout_constraintTop_toTopOf="@+id/BackgroundImage"
+        app:layout_constraintVertical_bias="0.627"
+        app:shapeAppearanceOverlay="@style/roundimageview"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/txtHelpTitle"
         android:layout_width="wrap_content"
@@ -19,11 +50,11 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.040" />
+        app:layout_constraintVertical_bias="0.090" />
 
     <TextView
         android:id="@+id/txtHelpBodyA"
-        android:layout_width="297dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="- 'Celebrity Guessing Game' consists of 10 celebrity name matching questions"
         android:textColor="#000000"
@@ -31,14 +62,14 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.080"
+        app:layout_constraintHorizontal_bias="0.190"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtHelpTitle"
         app:layout_constraintVertical_bias="0.040" />
 
     <TextView
         android:id="@+id/txtHelpBodyB"
-        android:layout_width="297dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="- Each question provides a celebrity image with four possible name choices"
         android:textColor="#000000"
@@ -46,14 +77,14 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.080"
+        app:layout_constraintHorizontal_bias="0.190"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtHelpBodyA"
-        app:layout_constraintVertical_bias="0.040" />
+        app:layout_constraintVertical_bias="0.060" />
 
     <TextView
         android:id="@+id/txtHelpBodyC"
-        android:layout_width="297dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="- Correct answers give +1 points"
         android:textColor="#000000"
@@ -61,14 +92,14 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.910"
+        app:layout_constraintHorizontal_bias="0.810"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtHelpTitle"
-        app:layout_constraintVertical_bias="0.060" />
+        app:layout_constraintVertical_bias="0.020" />
 
     <TextView
         android:id="@+id/txtHelpBodyD"
-        android:layout_width="297dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="- Wrong answers give 0 points"
         android:textColor="#000000"
@@ -76,14 +107,14 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.910"
+        app:layout_constraintHorizontal_bias="0.810"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtHelpBodyC"
-        app:layout_constraintVertical_bias="0.060" />
+        app:layout_constraintVertical_bias="0.020" />
 
     <TextView
         android:id="@+id/txtHelpBodyE"
-        android:layout_width="297dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="- Score is your point total at the end of 10 questions"
         android:textColor="#000000"
@@ -91,10 +122,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.910"
+        app:layout_constraintHorizontal_bias="0.810"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtHelpBodyD"
-        app:layout_constraintVertical_bias="0.060" />
+        app:layout_constraintVertical_bias="0.020" />
 
     <Button
         android:id="@+id/btnHelpHome"
@@ -108,5 +139,5 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.950" />
+        app:layout_constraintVertical_bias="0.896" />
 </androidx.constraintlayout.widget.ConstraintLayout>
