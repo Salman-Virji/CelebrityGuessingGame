@@ -14,8 +14,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 
 public class Game extends AppCompatActivity implements View.OnClickListener  {
@@ -39,7 +37,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
         btnChoice2 = (Button) findViewById(R.id.btnChoice2);
         btnChoice3 = (Button) findViewById(R.id.btnChoice3);
         btnChoice4 = (Button) findViewById(R.id.btnChoice4);
-        reset= findViewById(R.id.idReset);
+        reset= findViewById(R.id.btnNext);
 
         btnChoice1.setOnClickListener(this);
         btnChoice2.setOnClickListener(this);
@@ -101,7 +99,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
     public void getCelebs(){
 
         celebList.clear();
-        String[] name={"Ryan Renolds","Danny Devito","Steve Buscemi"};
+        String[] name={"Ryan Reynolds","Danny Devito","Steve Buscemi"};
         getJSON(correctname,name[index].toString());
         btnChoice1.setText(celebList.get(0).toString());
         btnChoice2.setText(celebList.get(1).toString());
@@ -121,7 +119,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
         int score = 0;
         String s;
         Button clickedBtn = findViewById(v.getId());
-        String[] name={"Ryan Renolds","Danny Devito","Steve Buscemi"};
+        String[] name={"Ryan Reynolds","Danny Devito","Steve Buscemi"};
 
 
 
