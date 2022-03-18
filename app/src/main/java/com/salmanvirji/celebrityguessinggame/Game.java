@@ -1,6 +1,7 @@
 package com.salmanvirji.celebrityguessinggame;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -170,6 +171,26 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
 
     }
 
+    // function for disabling the buttons after answering
+    public void disableButtons(){
+        btnChoice1.setEnabled(false);
+        btnChoice2.setEnabled(false);
+        btnChoice3.setEnabled(false);
+        btnChoice4.setEnabled(false);
+    }
+
+    // function for enabling the buttons after answering
+    public void enableButtons(){
+        btnChoice1.setBackgroundColor(ContextCompat.getColor(Game.this, R.color.purple_500));
+        btnChoice2.setBackgroundColor(ContextCompat.getColor(Game.this, R.color.purple_500));
+        btnChoice3.setBackgroundColor(ContextCompat.getColor(Game.this, R.color.purple_500));
+        btnChoice4.setBackgroundColor(ContextCompat.getColor(Game.this, R.color.purple_500));
+        btnChoice1.setEnabled(true);
+        btnChoice2.setEnabled(true);
+        btnChoice3.setEnabled(true);
+        btnChoice4.setEnabled(true);
+    }
+
     // go to win screen
     public void goToWinScreen(){
 
@@ -200,10 +221,12 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
                 if(index == 7) {
 
                      goToWinScreen();
+
                    // index++;
                 }
                 else{
                    // setContentView(R.layout.activity_win);
+                    enableButtons();
                     index++;
 
                 }
@@ -222,13 +245,15 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
             {
 
                getScore();
-                clickedBtn.setText("Winner");
+                clickedBtn.setBackgroundColor(ContextCompat.getColor(Game.this, R.color.correct));
+                disableButtons();
 
 
 
             }
             else if(!clickedBtn.equals(name[index])&& !clickedBtn.getText().equals("Next")){
-                clickedBtn.setText("Wrong");
+                clickedBtn.setBackgroundColor(ContextCompat.getColor(Game.this, R.color.wrong));
+                disableButtons();
 
                // getCelebs();
             }
