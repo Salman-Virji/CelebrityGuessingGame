@@ -29,64 +29,56 @@
             app:srcCompat="@drawable/background_pic" />
 
         <Button
-            android:id="@+id/btnChoice1"
+            android:id="@+id/option_1"
             android:layout_width="145dp"
             android:layout_height="60dp"
-            android:layout_marginEnd="27dp"
-            android:backgroundTint="@color/purple_500"
+            android:layout_marginTop="92dp"
+            android:backgroundTint="#489556"
             android:tag="Choice1"
             android:text="Choice1"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnChoice2"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.598"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.339" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnChoice3"
+            android:id="@+id/option_3"
             android:layout_width="145dp"
             android:layout_height="60dp"
-            android:layout_marginEnd="27dp"
-            android:backgroundTint="@color/purple_500"
+            android:layout_marginTop="164dp"
+            android:backgroundTint="#489556"
             android:text="Choice3"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnChoice4"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.598"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.612" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnChoice2"
+            android:id="@+id/option_2"
             android:layout_width="145dp"
             android:layout_height="60dp"
-            android:backgroundTint="@color/purple_500"
+            android:layout_marginTop="92dp"
+            android:backgroundTint="#489556"
             android:text="Choice2"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.918"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.339" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnChoice4"
+            android:id="@+id/option_4"
             android:layout_width="145dp"
             android:layout_height="60dp"
-            android:backgroundTint="@color/purple_500"
+            android:layout_marginTop="164dp"
+            android:backgroundTint="#489556"
             android:text="Choice4"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.918"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.616" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/image"
             android:layout_width="219dp"
             android:layout_height="221dp"
             android:backgroundTint="@color/purple_500"
@@ -98,46 +90,45 @@
             app:layout_constraintVertical_bias="0.496"
             app:srcCompat="@drawable/question" />
 
-        <TextView
-            android:id="@+id/txtScore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/purple_500"
-            android:text="Score:"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/BackgroundImage"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.556"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.825" />
-
         <Button
-            android:id="@+id/btnNext"
+            android:id="@+id/next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/purple_500"
             android:text="Next"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.882"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.869" />
+            app:layout_constraintEnd_toEndOf="@+id/BackgroundImage"
+            app:layout_constraintHorizontal_bias="0.885"
+            app:layout_constraintStart_toStartOf="@+id/BackgroundImage"
+            app:layout_constraintTop_toTopOf="@+id/BackgroundImage"
+            app:layout_constraintVertical_bias="0.879" />
 
-        <TextView
-            android:id="@+id/txtScorenum"
+        <Button
+            android:id="@+id/btnFinish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="0"
-            android:textSize="20sp"
+            android:backgroundTint="#489556"
+            android:text="Results"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/BackgroundImage"
+            app:layout_constraintHorizontal_bias="0.42"
+            app:layout_constraintStart_toStartOf="@+id/BackgroundImage"
+            app:layout_constraintTop_toTopOf="@+id/BackgroundImage"
+            app:layout_constraintVertical_bias="0.876" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="totalScore"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.613"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.822" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
