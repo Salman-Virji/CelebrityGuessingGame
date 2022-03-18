@@ -18,11 +18,42 @@
 			"name3":"John Krasinski",
 			"name4":"Danny Devito",
 			"correctname":"Steve Buscemi"
-		}
-			
-			
-		
-		
+		},
+	{	"name1":"User",
+		"name2":"Bruno Mars",
+		"name3":"Justin Bieber",
+		"name4":"Pitbull",
+		"correctname":"Justin Bieber"
+	},
+	{	"name1":"Steven Tyler",
+		"name2":"Pitbull",
+		"name3":"Usher",
+		"name4":"Bruno Mars",
+		"correctname":"Bruno Mars"
+	},
+	{	"name1":"Justin Timberlake",
+		"name2":"Mark Antony",
+		"name3":"Chris Brown",
+		"name4":"Jojo",
+		"correctname":"Justin Timberlake"
+	},
+	{	"name1":"Jennifer Aniston",
+		"name2":"Jennifer Lopez",
+		"name3":"Selena Gomez",
+		"name4":"Katy Perry",
+		"correctname":"Katy Perry"
+	},
+	{	"name1":"Selena Gomez",
+		"name2":"Modanna",
+		"name3":"Christina Grimmie",
+		"name4":"Jennifer Lopez",
+		"correctname":"Selena Gomez"
+	}
+
+
+
+
+
 
 
 ]

@@ -2,9 +2,11 @@ package com.salmanvirji.celebrityguessinggame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -23,6 +25,8 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
     Button btnChoice1, btnChoice2, btnChoice3, btnChoice4,reset;
     TextView txtScorenum;
     String correctname ="correctname";
+    String score ="0";
+    ImageView celebimg;
    // String celebname;
     int index = 0;
 
@@ -30,9 +34,11 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        int score = 0;
+        String s;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-
+        celebimg = (ImageView)findViewById (R.id.imgPlaceHolder);
         btnChoice1 = (Button) findViewById(R.id.btnChoice1);
         btnChoice2 = (Button) findViewById(R.id.btnChoice2);
         btnChoice3 = (Button) findViewById(R.id.btnChoice3);
@@ -58,11 +64,13 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
     }
 
     // https://www.youtube.com/watch?v=h71Ia9iFWfI tutorial on importing and parsing json data
-    private void getJSON(String correctname, String celebname)
+    public void getJSON(String correctname, String celebname)
     {
 
         String json;
         try{
+
+            //getting the json file from the assets folder
             InputStream is = getAssets().open("celebs.json");
             int size = is.available();
             byte[] buffer = new byte[size];
@@ -74,6 +82,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
 
             JSONArray jsonArray = new JSONArray(json);
 
+            //travising the json and adding its contents to celebList
             for(int i = 0; i<jsonArray.length(); i++){
                 JSONObject obj = jsonArray.getJSONObject(i);
                 if(obj.getString(correctname).equals(celebname)){
@@ -96,11 +105,16 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
         }
     }
 
+    //get celebrities to display
     public void getCelebs(){
-
+        //Clears list everytime function is called
         celebList.clear();
-        String[] name={"Ryan Reynolds","Danny Devito","Steve Buscemi"};
+        // String array holds celeb names. we use the index of the array to get the json data
+        String[] name={"Ryan Reynolds","Danny Devito","Steve Buscemi","Bruno Mars","Justin Bieber","Katy Perry","Selena Gomez","Justin Timberlake","Win Screen"};
+        // get json data and store it in the array list celebList
         getJSON(correctname,name[index].toString());
+
+        // set btn text from celebList
         btnChoice1.setText(celebList.get(0).toString());
         btnChoice2.setText(celebList.get(1).toString());
         btnChoice3.setText(celebList.get(2).toString());
@@ -108,40 +122,106 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
 
 
 
+        //Setting the celeb picture if index value matches the celeb name
+        if(name[index] =="Ryan Reynolds"){
+            celebimg.setImageResource(R.drawable.ryan_reynolds);
+        }
+
+        if(name[index] =="Danny Devito"){
+            celebimg.setImageResource(R.drawable.danny_devito);
+        }
+        if(name[index] =="Steve Buscemi"){
+            celebimg.setImageResource(R.drawable.steve_buscemi);
+        }
+        if(name[index] =="Bruno Mars"){
+            celebimg.setImageResource(R.drawable.bruno_mars);
+        }
+        if(name[index] =="Justin Bieber"){
+            celebimg.setImageResource(R.drawable.justin_bieber);
+        }
+        if(name[index] =="Justin Timberlake"){
+            celebimg.setImageResource(R.drawable.justin_timberlake);
+        }
+        if(name[index] =="Katy Perry"){
+            celebimg.setImageResource(R.drawable.katy_perry);
+        }
+        if(name[index] =="Selena Gomez"){
+            celebimg.setImageResource(R.drawable.selena_gomez);
+        }
+
+
+
     }
 
 
+    // updates the score by incrementing the value
+    public void getScore(){
+
+
+        String s = txtScorenum.getText().toString();
+
+        int i = Integer.parseInt(s);
+        i++;
+
+         score = new Integer(i).toString();
+
+        txtScorenum.setText(score);
+
+
+    }
+
+    // go to win screen
+    public void goToWinScreen(){
+
+        Intent intent2 = new Intent(this, WinPosition.class);
+        intent2.putExtra("score",score);
+        startActivity(intent2);
+        finish();
+    }
     public void onClick(View v){
 
 
         int i = 0;
         //int index;
         int score = 0;
-        String s;
+
+        // finding which button was clicked
         Button clickedBtn = findViewById(v.getId());
-        String[] name={"Ryan Reynolds","Danny Devito","Steve Buscemi"};
+
+        //string array to hold celeb names same to get data off thier index postion
+        String[] name={"Ryan Reynolds","Danny Devito","Steve Buscemi","Bruno Mars","Justin Bieber","Katy Perry","Selena Gomez","Justin Timberlake","end"};
 
 
 
 
-
+            // incerment up the array to get new values
             if(clickedBtn.getText().equals("Next")){
 
-                if(index >=0 && index <=3){
+                if(index == 7) {
+
+                     goToWinScreen();
+                   // index++;
+                }
+                else{
+                   // setContentView(R.layout.activity_win);
                     index++;
+
                 }
-                if(index ==3){
-                    index = 0;
-                }
+
+                //at end of array go to win screen
+
+
+                 //getCelebs based on new index
                 getCelebs();
+
+
             }
 
 
             if(clickedBtn.getText().equals(name[index]) && !clickedBtn.getText().equals("Next") )
             {
-                score++;
-                s =String.valueOf(score);
-                txtScorenum.setText(s);
+
+               getScore();
                 clickedBtn.setText("Winner");
 
 

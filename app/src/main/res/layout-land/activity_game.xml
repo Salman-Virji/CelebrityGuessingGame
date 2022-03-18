@@ -86,7 +86,7 @@
             app:layout_constraintVertical_bias="0.616" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imgPlaceHolder"
             android:layout_width="219dp"
             android:layout_height="221dp"
             android:backgroundTint="@color/purple_500"
