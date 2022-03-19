@@ -111,7 +111,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
         //Clears list everytime function is called
         celebList.clear();
         // String array holds celeb names. we use the index of the array to get the json data
-        String[] name={"Ryan Reynolds","Danny Devito","Steve Buscemi","Bruno Mars","Justin Bieber","Katy Perry","Selena Gomez","Justin Timberlake","Win Screen"};
+        String[] name={"Ryan Reynolds","Danny Devito","Steve Buscemi","Mahershala Ali","Bruno Mars","Justin Bieber","Rihanna","Katy Perry","Selena Gomez","Justin Timberlake","Win Screen"};
         // get json data and store it in the array list celebList
         getJSON(correctname,name[index].toString());
 
@@ -134,11 +134,17 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
         if(name[index] =="Steve Buscemi"){
             celebimg.setImageResource(R.drawable.steve_buscemi);
         }
+        if(name[index] =="Mahershala Ali"){
+            celebimg.setImageResource(R.drawable.mahershala_ali);
+        }
         if(name[index] =="Bruno Mars"){
             celebimg.setImageResource(R.drawable.bruno_mars);
         }
         if(name[index] =="Justin Bieber"){
             celebimg.setImageResource(R.drawable.justin_bieber);
+        }
+        if(name[index] =="Rihanna"){
+            celebimg.setImageResource(R.drawable.rihanna);
         }
         if(name[index] =="Justin Timberlake"){
             celebimg.setImageResource(R.drawable.justin_timberlake);
@@ -210,7 +216,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
         Button clickedBtn = findViewById(v.getId());
 
         //string array to hold celeb names same to get data off thier index postion
-        String[] name={"Ryan Reynolds","Danny Devito","Steve Buscemi","Bruno Mars","Justin Bieber","Katy Perry","Selena Gomez","Justin Timberlake","end"};
+        String[] name={"Ryan Reynolds","Danny Devito","Steve Buscemi","Mahershala Ali","Bruno Mars","Justin Bieber","Rihanna","Katy Perry","Selena Gomez","Justin Timberlake","end"};
 
 
 
@@ -218,7 +224,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener  {
             // incerment up the array to get new values
             if(clickedBtn.getText().equals("Next")){
 
-                if(index == 7) {
+                if(index == 9) {
 
                      goToWinScreen();
 

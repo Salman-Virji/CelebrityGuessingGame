@@ -9,7 +9,7 @@
 		
 		{"name1":"Leonardo DiCaprio",
 		 "name2":"Danny Devito",
-		 "name3":"Ben Afflek",
+		 "name3":"Ben Affleck",
 		 "name4":"Steve Buscemi",
 		 "correctname":"Danny Devito"
 		},
@@ -19,7 +19,7 @@
 			"name4":"Danny Devito",
 			"correctname":"Steve Buscemi"
 		},
-	{	"name1":"User",
+	{	"name1":"Usher",
 		"name2":"Bruno Mars",
 		"name3":"Justin Bieber",
 		"name4":"Pitbull",
@@ -44,10 +44,22 @@
 		"correctname":"Katy Perry"
 	},
 	{	"name1":"Selena Gomez",
-		"name2":"Modanna",
+		"name2":"Madonna",
 		"name3":"Christina Grimmie",
 		"name4":"Jennifer Lopez",
 		"correctname":"Selena Gomez"
+	},
+	{	"name1":"Zendaya",
+		"name2":"Kim Kardashian",
+		"name3":"Rihanna",
+		"name4":"Ariana Grande",
+		"correctname":"Rihanna"
+	},
+	{	"name1":"Kevin Hart",
+		"name2":"Idris Elba",
+		"name3":"Mahershala Ali",
+		"name4":"Samuel L. Jackson",
+		"correctname":"Mahershala Ali"
 	}
 
 
