@@ -2,25 +2,22 @@ package com.salmanvirji.celebrityguessinggame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
-import android.content.Intent;
 
 import org.w3c.dom.Text;
 
-public class WinPosition extends AppCompatActivity {
+public class Help extends AppCompatActivity {
 
     Button button_home;
-    TextView totalScore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_win);
+        setContentView(R.layout.activity_help);
 
-        totalScore = findViewById(R.id.totalScore);
-        totalScore.setText(this.getIntent().getExtras().getString("score"));
-        button_home =(Button) findViewById(R.id.button_home);
+        button_home =(Button) findViewById(R.id.btnHelpHome);
         button_home.setOnClickListener(v -> goHome());
     }
 
