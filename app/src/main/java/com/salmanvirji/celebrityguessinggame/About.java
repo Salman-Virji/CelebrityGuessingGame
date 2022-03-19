@@ -21,7 +21,7 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
 
 
-        button_home =(Button) findViewById(R.id.btnHelpHome);
+        button_home =(Button) findViewById(R.id.btnAboutHome);
         button_home.setOnClickListener(v -> goHome());
     }
 

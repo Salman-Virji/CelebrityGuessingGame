@@ -23,13 +23,16 @@
         </activity>
         <activity
             android:name=".Game"
-
-
             />
         <activity
-            android:name=".WinPosition" />
+            android:name=".WinPosition"
+            />
         <activity
-            android:name=".About" />
+            android:name=".Help"
+            />
+        <activity
+            android:name=".About"
+            />
     </application>
 
 </manifest>
