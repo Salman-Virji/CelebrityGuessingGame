@@ -14,18 +14,7 @@
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="52dp">
 
-        <Button
-            android:id="@+id/btnChoice1"
-            android:layout_width="145dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="252dp"
-            android:backgroundTint="@color/purple_500"
-            android:tag="Choice1"
-            android:text="Choice1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.097"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imgPlaceHolder" />
+
 
         <ImageView
             android:id="@+id/BackgroundImage"
@@ -40,6 +29,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/background_pic" />
+        <Button
+            android:id="@+id/btnChoice1"
+            android:layout_width="145dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="252dp"
+            android:backgroundTint="@color/purple_500"
+            android:tag="Choice1"
+            android:text="Choice1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgPlaceHolder" />
 
         <Button
             android:id="@+id/btnChoice3"

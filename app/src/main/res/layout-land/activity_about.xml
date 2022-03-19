@@ -42,7 +42,7 @@
         android:id="@+id/txtAboutTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How To Play"
+        android:text="About"
         android:textColor="#000000"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -57,37 +57,36 @@
         android:id="@+id/txtHelpBodyA"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="- 'Celebrity Guessing Game' consists of 10 celebrity name matching questions"
+        android:text="App created by:"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.190"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAboutTitle"
-        app:layout_constraintVertical_bias="0.040" />
+        app:layout_constraintVertical_bias="0.021" />
 
     <TextView
         android:id="@+id/txtHelpBodyB"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="- Each question provides a celebrity image with four possible name choices"
+        android:text="Salman Virji"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.190"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtHelpBodyA"
-        app:layout_constraintVertical_bias="0.060" />
+        app:layout_constraintVertical_bias="0.035" />
 
     <TextView
         android:id="@+id/txtHelpBodyC"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="- Correct answers give +1 points"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -102,31 +101,31 @@
         android:id="@+id/txtHelpBodyD"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="- Wrong answers give 0 points"
+        android:text="Ruslan Mastov"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.810"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtHelpBodyC"
-        app:layout_constraintVertical_bias="0.020" />
+        app:layout_constraintVertical_bias="0.247" />
 
     <TextView
         android:id="@+id/txtHelpBodyE"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="- Score is your point total at the end of 10 questions"
+        android:text="Conner Pittman"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.810"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtHelpBodyD"
-        app:layout_constraintVertical_bias="0.020" />
+        app:layout_constraintVertical_bias="0.112" />
 
     <Button
         android:id="@+id/btnHelpHome"

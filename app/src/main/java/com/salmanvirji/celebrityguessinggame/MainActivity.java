@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnPlay;
+    Button btnPlay, btnAbout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,12 +21,20 @@ public class MainActivity extends AppCompatActivity {
 
         btnPlay =(Button) findViewById(R.id.btnPlay);
         btnPlay.setOnClickListener(v -> openGame());
+        btnAbout = (Button) findViewById(R.id.btnAbout);
+        btnAbout.setOnClickListener(v -> openAbout());
 
     }
 
     public void openGame(){
         Intent intent = new Intent(this, Game.class);
         startActivity(intent);
+        finish();
+    }
+
+    public void openAbout(){
+        Intent intent3 = new Intent(this, About.class);
+        startActivity(intent3);
         finish();
     }
 

@@ -28,6 +28,8 @@
             />
         <activity
             android:name=".WinPosition" />
+        <activity
+            android:name=".About" />
     </application>
 
 </manifest>

@@ -38,7 +38,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/txtHelpTitle"
+        android:id="@+id/txtAboutTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="How To Play"
@@ -64,7 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHelpTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtAboutTitle"
         app:layout_constraintVertical_bias="0.030" />
 
     <TextView
